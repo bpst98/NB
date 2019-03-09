@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import GoogleSignIn
+//18219731635-ek0m6uf3salr4o3fb6mc8jpige5609vi.apps.googleusercontent.com
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GIDSignIn.sharedInstance()?.clientID = "c18219731635-ek0m6uf3salr4o3fb6mc8jpige5609vi.apps.googleusercontent.com"
         return true
     }
 
