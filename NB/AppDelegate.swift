@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  NB
-//
-//  Created by Bhanu Pratap Singh Thapliyal on 04/01/19.
-//  Copyright © 2019 Bhanu Pratap Singh Thapliyal. All rights reserved.
-//
-
 import UIKit
 import GoogleSignIn
 //18219731635-ek0m6uf3salr4o3fb6mc8jpige5609vi.apps.googleusercontent.com
