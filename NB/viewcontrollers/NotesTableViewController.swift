@@ -1,22 +1,26 @@
 //
-//  SubjectTableTableViewController.swift
+//  NotesTableViewController.swift
 //  NB
 //
-//  Created by Bhanu Pratap Singh Thapliyal on 25/05/19.
+//  Created by Bhanu Pratap Singh Thapliyal on 10/07/19.
 //  Copyright © 2019 Bhanu Pratap Singh Thapliyal. All rights reserved.
 //
 
 import UIKit
 
-class DownloadTableViewController: UITableViewController {
+class NotesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+
+    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213A5C8422D572D50013A178 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A5C8322D572D50013A178 /* NotesTableViewController.swift */; };
 		213BF5FE21DFCE420089BB9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213BF5FD21DFCE420089BB9A /* AppDelegate.swift */; };
 		213BF60321DFCE420089BB9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213BF60121DFCE420089BB9A /* Main.storyboard */; };
 		213BF60521DFCE440089BB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213BF60421DFCE440089BB9A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213A5C8322D572D50013A178 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		213BF5FA21DFCE420089BB9A /* NB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213BF5FD21DFCE420089BB9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		213BF60221DFCE420089BB9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				219139F921F0BFDA003ABEE9 /* ViewController.swift */,
 				21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */,
 				21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */,
+				213A5C8322D572D50013A178 /* NotesTableViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					213BF5F921DFCE420089BB9A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -253,6 +257,7 @@
 				21EDA3A32299B9850067A91C /* SubjectTableViewController.swift in Sources */,
 				213BF5FE21DFCE420089BB9A /* AppDelegate.swift in Sources */,
 				21EDA3A52299B9890067A91C /* DownloadTableViewController copy.swift in Sources */,
+				213A5C8422D572D50013A178 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bhanu.NB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -429,7 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bhanu.NB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
