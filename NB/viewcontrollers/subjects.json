@@ -1,0 +1,17 @@
+{
+    "subjects":
+    [
+        {
+            "title":"wireless communication",
+            "id":"1"
+        },
+        {
+            "title":"sofware testing and Quality assurance",
+            "id":"2"
+        },
+        {
+            "title":"Information Security",
+            "id":"3"
+        }
+    ]
+}

@@ -16,6 +16,8 @@
 		21EDA3A32299B9850067A91C /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */; };
 		21EDA3A52299B9890067A91C /* DownloadTableViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */; };
 		21EDA3AA22A01D5A0067A91C /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A922A01D5A0067A91C /* SubjectTableViewCell.swift */; };
+		21F98B9023209177005CC86D /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 21F98B8F23209177005CC86D /* subjects.json */; };
+		21F98B9223218B7B005CC86D /* PopUpOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F98B9123218B7B005CC86D /* PopUpOptionViewController.swift */; };
 		B08AFA4277F2F6C18BB9B182 /* Pods_NB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDACB8CCB72DBCF49BB1A30 /* Pods_NB.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
 		21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadTableViewController copy.swift"; sourceTree = "<group>"; };
 		21EDA3A922A01D5A0067A91C /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
+		21F98B8F23209177005CC86D /* subjects.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = subjects.json; sourceTree = "<group>"; };
+		21F98B9123218B7B005CC86D /* PopUpOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpOptionViewController.swift; sourceTree = "<group>"; };
 		3CDACB8CCB72DBCF49BB1A30 /* Pods_NB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6887750F658DEEF937A6ACB4 /* Pods-NB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NB/Pods-NB.debug.xcconfig"; sourceTree = "<group>"; };
 		EBA6956BFDB40CE2AEB74350 /* Pods-NB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NB.release.xcconfig"; path = "Pods/Target Support Files/Pods-NB/Pods-NB.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,8 +76,8 @@
 				213BF5FD21DFCE420089BB9A /* AppDelegate.swift */,
 				213BF60F21E0AF290089BB9A /* viewcontrollers */,
 				213BF60121DFCE420089BB9A /* Main.storyboard */,
-				213BF60421DFCE440089BB9A /* Assets.xcassets */,
 				213BF60621DFCE440089BB9A /* LaunchScreen.storyboard */,
+				213BF60421DFCE440089BB9A /* Assets.xcassets */,
 				21EDA3AB22A042D30067A91C /* customCell */,
 				213BF60921DFCE440089BB9A /* Info.plist */,
 			);
@@ -85,8 +89,10 @@
 			children = (
 				219139F921F0BFDA003ABEE9 /* ViewController.swift */,
 				21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */,
+				21F98B8F23209177005CC86D /* subjects.json */,
 				21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */,
 				213A5C8322D572D50013A178 /* NotesTableViewController.swift */,
+				21F98B9123218B7B005CC86D /* PopUpOptionViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F98B9023209177005CC86D /* subjects.json in Resources */,
 				213BF60821DFCE440089BB9A /* LaunchScreen.storyboard in Resources */,
 				213BF60521DFCE440089BB9A /* Assets.xcassets in Resources */,
 				213BF60321DFCE420089BB9A /* Main.storyboard in Resources */,
@@ -256,6 +263,7 @@
 				219139FA21F0BFDA003ABEE9 /* ViewController.swift in Sources */,
 				21EDA3A32299B9850067A91C /* SubjectTableViewController.swift in Sources */,
 				213BF5FE21DFCE420089BB9A /* AppDelegate.swift in Sources */,
+				21F98B9223218B7B005CC86D /* PopUpOptionViewController.swift in Sources */,
 				21EDA3A52299B9890067A91C /* DownloadTableViewController copy.swift in Sources */,
 				213A5C8422D572D50013A178 /* NotesTableViewController.swift in Sources */,
 			);
