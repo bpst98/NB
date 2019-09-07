@@ -10,25 +10,25 @@ import UIKit
 
 class PopUpOptionViewController: UIViewController {
 
-    @IBOutlet weak var PopUpSubView: UIView!
-    @IBOutlet weak var Notes: UIButton!
-    @IBOutlet weak var QuestionPapers: UIButton!
-    @IBOutlet weak var PracticalFiles: UIButton!
-    @IBOutlet weak var EBooks: UIButton!
+    @IBOutlet weak var BackButton: UIButton!
+
+    @IBOutlet weak var NotesButton: UIButton!
+    @IBOutlet weak var QandAPapersButton: UIButton!
+    @IBOutlet weak var PracticalFilesButton: UIButton!
+    @IBOutlet weak var EBooksButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setConstaints()
+
 
     }
     
-    
-    func setConstaints(){
-        
-        let yconstraint = (self.view.frame.size.height-self.view.frame.size.width)/2
-        
-        PopUpSubView.frame = CGRect(x: 0, y: yconstraint, width: self.view.frame.size.width, height: self.view.frame.size.width)
+    @IBAction func BackButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
         
     }
+    
+    
+    
 }

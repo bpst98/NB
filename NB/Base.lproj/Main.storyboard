@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fLP-8q-I5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mJ-xQ-B7C">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -96,85 +96,143 @@
                             <outlet property="delegate" destination="Ket-fH-cfp" id="3yr-MA-hFB"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="avl-Mv-dD4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-Yz-ZFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706.875" y="-54.929577464788736"/>
+            <point key="canvasLocation" x="1704.375" y="-54.929577464788736"/>
         </scene>
         <!--Pop Up Option View Controller-->
         <scene sceneID="bWX-Ly-NSh">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="fLP-8q-I5n" customClass="PopUpOptionViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpOptionViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="fLP-8q-I5n" customClass="PopUpOptionViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RcH-iL-NpO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xNm-SC-06z">
-                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGD-h5-PUT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="0.05931269171779141" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackButtonAction:" destination="fLP-8q-I5n" eventType="touchUpInside" id="yEx-kE-RPy"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QT-ZI-LLn">
+                                <rect key="frame" x="16" y="128" width="288" height="312"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notespopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="SRf-D6-9pR">
-                                        <rect key="frame" x="8" y="0.0" width="304" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Practicalfilepopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-B0-4LC">
+                                        <rect key="frame" x="0.0" y="160" width="288" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="snz-jY-4IO"/>
+                                        </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quespaperpopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="zdJ-gy-Squ">
-                                        <rect key="frame" x="8" y="81" width="304" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ebookspopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-4k-bdS">
+                                        <rect key="frame" x="0.0" y="240" width="288" height="72"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Practicalfilepopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="3Uw-pb-rlR">
-                                        <rect key="frame" x="8" y="162" width="304" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notespopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="7RQ-x9-fXD">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="UKq-HW-tUQ"/>
+                                        </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ebookspopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="rOo-QJ-uwA">
-                                        <rect key="frame" x="8" y="243" width="304" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ2-bI-5fV">
-                                        <rect key="frame" x="75" y="8" width="230" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-o9-3yP">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="TjQ-77-a0P"/>
+                                            <constraint firstAttribute="height" constant="72" id="tsc-b1-mQp"/>
+                                        </constraints>
                                         <state key="normal" title="Notes">
-                                            <color key="titleColor" red="0.91301102810000001" green="0.92163405720000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-PA-FNp">
-                                        <rect key="frame" x="75" y="90" width="230" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyq-GR-cLO">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="72"/>
                                         <state key="normal" title="Question Papers">
-                                            <color key="titleColor" red="0.91301102810000001" green="0.92163405720000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3p-ZV-j06">
-                                        <rect key="frame" x="75" y="171" width="230" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eby-d2-hgE">
+                                        <rect key="frame" x="0.0" y="160" width="288" height="72"/>
                                         <state key="normal" title="Practical Files">
-                                            <color key="titleColor" red="0.91301102810000001" green="0.92163405720000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-Ub-pc0">
-                                        <rect key="frame" x="75" y="252" width="230" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-2m-3xy">
+                                        <rect key="frame" x="0.0" y="240" width="288" height="72"/>
                                         <state key="normal" title="E-books">
-                                            <color key="titleColor" red="0.91301102810000001" green="0.92163405720000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quespaperpopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="ry1-7x-rch">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="huE-3t-cNe"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="trailing" secondItem="ry1-7x-rch" secondAttribute="trailing" id="0Sv-xc-3pS"/>
+                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="top" secondItem="0QT-ZI-LLn" secondAttribute="top" id="29k-o4-Zzi"/>
+                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="leading" secondItem="kbA-4k-bdS" secondAttribute="leading" id="2Y9-IC-hKE"/>
+                                    <constraint firstItem="UNp-2m-3xy" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="9ma-Qv-m8A"/>
+                                    <constraint firstItem="eby-d2-hgE" firstAttribute="top" secondItem="ry1-7x-rch" secondAttribute="bottom" constant="8" id="A9E-tM-WO9"/>
+                                    <constraint firstItem="ry1-7x-rch" firstAttribute="top" secondItem="7RQ-x9-fXD" secondAttribute="bottom" constant="8" symbolic="YES" id="Blu-hs-Hxm"/>
+                                    <constraint firstItem="UNp-2m-3xy" firstAttribute="top" secondItem="zqT-B0-4LC" secondAttribute="bottom" constant="8" id="DA7-xU-T5s"/>
+                                    <constraint firstItem="dfZ-o9-3yP" firstAttribute="top" secondItem="0QT-ZI-LLn" secondAttribute="top" id="EQp-C8-ZC0"/>
+                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="leading" secondItem="ry1-7x-rch" secondAttribute="leading" id="EwZ-JG-W70"/>
+                                    <constraint firstItem="pyq-GR-cLO" firstAttribute="top" secondItem="7RQ-x9-fXD" secondAttribute="bottom" constant="8" id="HVF-mf-1Ls"/>
+                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="top" secondItem="ry1-7x-rch" secondAttribute="bottom" constant="8" symbolic="YES" id="Hqc-P0-Hne"/>
+                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="JfF-o1-evK"/>
+                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="top" secondItem="pyq-GR-cLO" secondAttribute="bottom" constant="8" id="Jne-ax-5k6"/>
+                                    <constraint firstItem="kbA-4k-bdS" firstAttribute="top" secondItem="eby-d2-hgE" secondAttribute="bottom" constant="8" id="Juz-s3-bqD"/>
+                                    <constraint firstAttribute="trailing" secondItem="dfZ-o9-3yP" secondAttribute="trailing" id="PrD-Jw-Puc"/>
+                                    <constraint firstItem="dfZ-o9-3yP" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="TiA-Qe-5tJ"/>
+                                    <constraint firstItem="kbA-4k-bdS" firstAttribute="top" secondItem="zqT-B0-4LC" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFa-dw-xZv"/>
+                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="trailing" secondItem="kbA-4k-bdS" secondAttribute="trailing" id="biF-sz-uzt"/>
+                                    <constraint firstAttribute="width" constant="288" id="dfw-zE-Umy"/>
+                                    <constraint firstItem="ry1-7x-rch" firstAttribute="trailing" secondItem="zqT-B0-4LC" secondAttribute="trailing" id="fPK-vb-pDJ"/>
+                                    <constraint firstAttribute="height" constant="312" id="fVq-q8-y16"/>
+                                    <constraint firstAttribute="trailing" secondItem="7RQ-x9-fXD" secondAttribute="trailing" id="gDt-uN-Tsv"/>
+                                    <constraint firstItem="eby-d2-hgE" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="ibb-E3-Jl9"/>
+                                    <constraint firstAttribute="bottom" secondItem="UNp-2m-3xy" secondAttribute="bottom" id="m6j-Ms-R56"/>
+                                    <constraint firstAttribute="bottom" secondItem="kbA-4k-bdS" secondAttribute="bottom" id="mGW-Dj-7s8"/>
+                                    <constraint firstItem="ry1-7x-rch" firstAttribute="leading" secondItem="zqT-B0-4LC" secondAttribute="leading" id="ov7-DK-dvo"/>
+                                    <constraint firstAttribute="trailing" secondItem="eby-d2-hgE" secondAttribute="trailing" id="tjh-bm-EMG"/>
+                                    <constraint firstAttribute="trailing" secondItem="pyq-GR-cLO" secondAttribute="trailing" id="tkm-wU-9n1"/>
+                                    <constraint firstAttribute="trailing" secondItem="UNp-2m-3xy" secondAttribute="trailing" id="uUY-ml-u12"/>
+                                    <constraint firstAttribute="bottom" secondItem="kbA-4k-bdS" secondAttribute="bottom" id="yOS-Kd-lQl"/>
+                                    <constraint firstItem="pyq-GR-cLO" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="zhG-BM-vRw"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerY" secondItem="sGD-h5-PUT" secondAttribute="centerY" id="42C-Xx-bCI"/>
+                            <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerX" secondItem="sGD-h5-PUT" secondAttribute="centerX" id="GGr-ze-DNq"/>
+                            <constraint firstAttribute="trailing" secondItem="sGD-h5-PUT" secondAttribute="trailing" id="IGU-zw-bX3"/>
+                            <constraint firstItem="sGD-h5-PUT" firstAttribute="bottom" secondItem="Vbf-YN-9VX" secondAttribute="bottom" id="QOS-cY-Qud"/>
+                            <constraint firstItem="sGD-h5-PUT" firstAttribute="leading" secondItem="Vbf-YN-9VX" secondAttribute="leading" id="RNf-iu-LMN"/>
+                            <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerX" secondItem="sGD-h5-PUT" secondAttribute="centerX" id="cVz-PQ-G3n"/>
+                            <constraint firstItem="sGD-h5-PUT" firstAttribute="top" secondItem="RcH-iL-NpO" secondAttribute="top" id="tTx-QI-LtB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vbf-YN-9VX"/>
                     </view>
                     <connections>
-                        <outlet property="EBooks" destination="SuG-Ub-pc0" id="iSi-z4-VV6"/>
-                        <outlet property="Notes" destination="OQ2-bI-5fV" id="PUM-Rt-oLZ"/>
-                        <outlet property="PopUpSubView" destination="xNm-SC-06z" id="1iw-Xp-klh"/>
-                        <outlet property="PracticalFiles" destination="O3p-ZV-j06" id="Rtq-1h-Y36"/>
-                        <outlet property="QuestionPapers" destination="ISr-PA-FNp" id="1gv-A9-UZC"/>
+                        <outlet property="BackButton" destination="sGD-h5-PUT" id="hg3-jP-LLp"/>
+                        <outlet property="EBooksButton" destination="UNp-2m-3xy" id="Efv-XN-VMT"/>
+                        <outlet property="NotesButton" destination="dfZ-o9-3yP" id="0n4-6g-Hfg"/>
+                        <outlet property="PracticalFilesButton" destination="eby-d2-hgE" id="bL8-v6-4N0"/>
+                        <outlet property="QandAPapersButton" destination="pyq-GR-cLO" id="XIo-HK-Y4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmx-UT-0NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402.5" y="-55.985915492957744"/>
+            <point key="canvasLocation" x="2400" y="-55.985915492957744"/>
         </scene>
         <!--Notes Table View Controller-->
         <scene sceneID="w7N-5v-ezM">
@@ -202,7 +260,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjT-h5-CJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2085" y="-55"/>
+            <point key="canvasLocation" x="3082.5" y="-55.985915492957744"/>
         </scene>
         <!--Download Table View Controller-->
         <scene sceneID="LEo-rJ-FDo">
@@ -233,12 +291,30 @@
             </objects>
             <point key="canvasLocation" x="707" y="645"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NPT-C4-0dt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2mJ-xQ-B7C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xCw-0s-syJ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ket-fH-cfp" kind="relationship" relationship="rootViewController" id="IVX-Sd-J3x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Eg-n1-GhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706.875" y="-54.929577464788736"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CellImage" width="256" height="256"/>
-        <image name="Practicalfilepopvcimage" width="640" height="160"/>
-        <image name="Quespaperpopvcimage" width="640" height="160"/>
-        <image name="ebookspopvcimage" width="640" height="160"/>
-        <image name="notespopvcimage" width="640" height="160"/>
+        <image name="Practicalfilepopvcimage" width="320" height="80"/>
+        <image name="Quespaperpopvcimage" width="320" height="80"/>
+        <image name="ebookspopvcimage" width="320" height="80"/>
+        <image name="notespopvcimage" width="320" height="80"/>
     </resources>
 </document>
