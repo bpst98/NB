@@ -1,10 +1,5 @@
-//
 //  SubjectTableViewCell.swift
-//  NB
-//
-//  Created by Bhanu Pratap Singh Thapliyal on 30/05/19.
-//  Copyright © 2019 Bhanu Pratap Singh Thapliyal. All rights reserved.
-//
+
 
 import UIKit
 
