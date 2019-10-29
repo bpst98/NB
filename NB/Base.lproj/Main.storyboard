@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mdk-wi-Hhs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4g8-BM-GRD">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="-1584" y="1076"/>
         </scene>
-        <!--Subject Table View Controller-->
+        <!--SUBJECTS-->
         <scene sceneID="ZP5-fM-PMZ">
             <objects>
                 <tableViewController id="Ket-fH-cfp" customClass="SubjectTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                             <outlet property="delegate" destination="Ket-fH-cfp" id="3yr-MA-hFB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="avl-Mv-dD4"/>
+                    <navigationItem key="navigationItem" title="SUBJECTS" id="avl-Mv-dD4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-Yz-ZFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="1982" y="1880"/>
         </scene>
-        <!--Notes Table View Controller-->
+        <!--NotesTableViewController-->
         <scene sceneID="w7N-5v-ezM">
             <objects>
-                <tableViewController id="mdk-wi-Hhs" customClass="NotesTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NotesTableViewController" title="NotesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="mdk-wi-Hhs" customClass="NotesTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vyZ-9Y-kuc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,7 +468,7 @@
         <scene sceneID="NPT-C4-0dt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2mJ-xQ-B7C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Subjects" image="icons8-read-30" selectedImage="sub" id="lnH-wT-Zol">
+                    <tabBarItem key="tabBarItem" title="Subjects" image="sub" selectedImage="sub" id="lnH-wT-Zol">
                         <color key="badgeColor" red="0.19451478119999999" green="0.59968537089999996" blue="0.96895736460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -503,7 +503,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muq-az-STJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="1075"/>
+            <point key="canvasLocation" x="460" y="1106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1mN-FE-o0m">
@@ -532,7 +532,6 @@
         <image name="author" width="52" height="52"/>
         <image name="downloads" width="24" height="24"/>
         <image name="ebookspopvcimage" width="320" height="80"/>
-        <image name="icons8-read-30" width="15" height="15"/>
         <image name="notespopvcimage" width="320" height="80"/>
         <image name="sub" width="30" height="30"/>
         <image name="upload date" width="48" height="48"/>

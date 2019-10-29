@@ -56,10 +56,24 @@ class NotesTableViewController: UITableViewController {
     }
     */
 
-    
-
-    
-
-    
-
 }
+
+//extension NotesTableViewController : selectedButtonDelegate{
+//    func didTapNotes(title: String) {
+//        
+//    }
+//    
+//    func didQandAPapers(title: String) {
+//        
+//    }
+//    
+//    func didTapPraticalFiles(title: String) {
+//        
+//    }
+//    
+//    func didTapEBooks(title: String) {
+//        
+//    }
+//    
+//    
+//}

@@ -64,7 +64,7 @@ class SubjectTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let popVC = storyboard?.instantiateViewController(withIdentifier: "PopUpOptionViewController") as? PopUpOptionViewController
-        self.navigationController?.present(popVC!, animated: true, completion: nil)
+        self.present(popVC!, animated: true, completion: nil)
     }
 
 

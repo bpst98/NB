@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol selectedButtonDelegate{
-    func didTapNotes(title:String)
-    func didQandAPapers(title:String)
-    func didTapPraticalFiles(title:String)
-    func didTapEBooks(title:String)
-}
+//protocol selectedButtonDelegate{
+//    func didTapNotes(title:String)
+//    func didQandAPapers(title:String)
+//    func didTapPraticalFiles(title:String)
+//    func didTapEBooks(title:String)
+//}
 
 class PopUpOptionViewController: UIViewController {
 
-    var delegate: selectedButtonDelegate?
+//    var delegate: selectedButtonDelegate!
         
     @IBOutlet weak var BackButton: UIButton!
 
@@ -38,20 +38,35 @@ class PopUpOptionViewController: UIViewController {
         
     }
     @IBAction func notesClicked(_ sender: Any) {
-        delegate?.didTapNotes(title: PopUpItem.title)
+//        delegate?.didTapNotes(title: PopUpItem.title)
+//        dismiss(animated: true, completion: nil)
+        print("Clicked notesCLicked")
+        let VC = (storyboard?.instantiateViewController(withIdentifier: "NotesTableViewController") as? NotesTableViewController)!
+        self.present(VC, animated: true, completion: nil)
     }
     @IBAction func QandAPapersClicked(_ sender: Any) {
-        delegate?.didQandAPapers(title: PopUpItem.title)
+//        delegate?.didQandAPapers(title: PopUpItem.title)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func PracticalFilesClicked(_ sender: Any) {
-        delegate?.didTapPraticalFiles(title: PopUpItem.title)
+//        delegate?.didTapPraticalFiles(title: PopUpItem.title)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func EBooksClicked(_ sender: Any) {
-        delegate?.didTapEBooks(title: PopUpItem.title)
+//        delegate?.didTapEBooks(title: PopUpItem.title)
+        dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    
+  
     
 }
+
+//extension PopUpOptionViewController{
+//
+//    func goToNotesTableViewController(){
+//        let VC = storyboard?.instantiateViewController(withIdentifier: "NotesTableViewController") as? NotesTableViewController
+//
+//        self.navigationController?.pushViewController(VC!, animated: true)
+//    }
+//
+//}
