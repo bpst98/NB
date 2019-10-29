@@ -7,11 +7,17 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
+    let Notes1 = Notes(Author: "Bhanu", Title: "Subject Number 1", Views: 100, Date: "15/11/2018", size: 23, url: "URL")
+    let Notes2 = Notes(Author: "Aditya", Title: "Subject number 1", Views: 200, Date: "15/11/2018", size: 15, url: "URL")
+    var NotesArray = [Notes]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    
 
     // MARK: - Table view data source
 
@@ -22,13 +28,13 @@ class NotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesTableViewCell
+        
         
 
         return cell

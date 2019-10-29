@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addToolBar()
         setPlaceHolderTextandInputView()
+        SetupLogin()
         
     }
     
@@ -30,6 +32,15 @@ class ViewController: UIViewController {
         SelectSemesterTextField.placeholder = "Select Semester"
         SelectBranchTextField.placeholder = "Select Branch"
     }
+    
+    func SetupLogin(){
+        
+        let signInButton = GIDSignInButton(frame: CGRect(x: 0,y: 0,width: 100,height: 100))
+        signInButton.center = view.center
+        
+        view.addSubview(signInButton)
+    }
+    
 }
 
 

@@ -7,6 +7,7 @@ class NotesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var DownloadView: UIView!
     @IBOutlet weak var DownloadViewLabel: UILabel!
+    
     @IBOutlet weak var NotesFileTitle: UILabel!
     @IBOutlet weak var AuthorLabel: UILabel!
     @IBOutlet weak var UploadDateLabel: UILabel!

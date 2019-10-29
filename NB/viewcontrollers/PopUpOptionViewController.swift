@@ -8,8 +8,17 @@
 
 import UIKit
 
+protocol selectedButtonDelegate{
+    func didTapNotes(title:String)
+    func didQandAPapers(title:String)
+    func didTapPraticalFiles(title:String)
+    func didTapEBooks(title:String)
+}
+
 class PopUpOptionViewController: UIViewController {
 
+    var delegate: selectedButtonDelegate?
+        
     @IBOutlet weak var BackButton: UIButton!
 
     @IBOutlet weak var NotesButton: UIButton!
@@ -17,10 +26,10 @@ class PopUpOptionViewController: UIViewController {
     @IBOutlet weak var PracticalFilesButton: UIButton!
     @IBOutlet weak var EBooksButton: UIButton!
     
+    var PopUpItem: POPup!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
     }
     
@@ -28,6 +37,20 @@ class PopUpOptionViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         
     }
+    @IBAction func notesClicked(_ sender: Any) {
+        delegate?.didTapNotes(title: PopUpItem.title)
+    }
+    @IBAction func QandAPapersClicked(_ sender: Any) {
+        delegate?.didQandAPapers(title: PopUpItem.title)
+    }
+    @IBAction func PracticalFilesClicked(_ sender: Any) {
+        delegate?.didTapPraticalFiles(title: PopUpItem.title)
+    }
+    @IBAction func EBooksClicked(_ sender: Any) {
+        delegate?.didTapEBooks(title: PopUpItem.title)
+    }
+    
+    
     
     
     
