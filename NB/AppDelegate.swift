@@ -1,8 +1,8 @@
 import UIKit
-import GoogleSignIn
+//import GoogleSignIn
 //18219731635-ek0m6uf3salr4o3fb6mc8jpige5609vi.apps.googleusercontent.com
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate{
     
     var window: UIWindow?
 
@@ -13,20 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
 //        var configError : NSError?
         
         
-        GIDSignIn.sharedInstance()?.delegate = self
+//        GIDSignIn.sharedInstance()?.delegate = self
                 //Gsign
         //     37391039704-kauve95gq044gvjrk5u0b8dm3esp88og.apps.googleusercontent.com
         return true
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if(error != nil){
-            print("Sign In Error")
-        }
-        else{
-            print("Signed in")
-        }
-     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -101,7 +101,7 @@
         <!--Pop Up Option View Controller-->
         <scene sceneID="bWX-Ly-NSh">
             <objects>
-                <viewController storyboardIdentifier="PopUpOptionViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="fLP-8q-I5n" customClass="PopUpOptionViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpOptionViewController" modalTransitionStyle="partialCurl" id="fLP-8q-I5n" customClass="PopUpOptionViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RcH-iL-NpO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-o9-3yP">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="72"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="288" id="TjQ-77-a0P"/>
                                             <constraint firstAttribute="height" constant="72" id="tsc-b1-mQp"/>
                                         </constraints>
                                         <state key="normal" title="Notes">
@@ -218,7 +217,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.75117834719999999" green="1" blue="0.9807201525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerY" secondItem="sGD-h5-PUT" secondAttribute="centerY" id="42C-Xx-bCI"/>
                             <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerX" secondItem="sGD-h5-PUT" secondAttribute="centerX" id="GGr-ze-DNq"/>
@@ -242,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1982" y="1880"/>
         </scene>
-        <!--NotesTableViewController-->
+        <!--Notes Table View Controller-->
         <scene sceneID="w7N-5v-ezM">
             <objects>
-                <tableViewController storyboardIdentifier="NotesTableViewController" title="NotesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="mdk-wi-Hhs" customClass="NotesTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NotesTableViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="mdk-wi-Hhs" customClass="NotesTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vyZ-9Y-kuc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,11 +387,11 @@
                         <color key="backgroundColor" red="0.68415542845380295" green="1" blue="0.61413327215195135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.52549019610000003" green="0.1450980392" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rOj-vv-qih">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="208" id="rOj-vv-qih">
+                                <rect key="frame" x="0.0" y="28" width="375" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rOj-vv-qih" id="tBJ-lx-HBA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -406,7 +405,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmJ-WH-9f3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="1880"/>
+            <point key="canvasLocation" x="-295.19999999999999" y="1879.610194902549"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="b5R-sg-J8w">

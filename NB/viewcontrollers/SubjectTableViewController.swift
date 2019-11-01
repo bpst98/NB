@@ -9,6 +9,7 @@ class SubjectTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
         parse()
         // self.clearsSelectionOnViewWillAppear = false
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -64,7 +65,7 @@ class SubjectTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let popVC = storyboard?.instantiateViewController(withIdentifier: "PopUpOptionViewController") as? PopUpOptionViewController
-        self.present(popVC!, animated: true, completion: nil)
+        self.navigationController?.pushViewController(popVC!, animated: true)
     }
 
 

@@ -7,6 +7,8 @@ target 'NB' do
 
   # Pods for NB
 
-pod 'GoogleSignIn'
+# pod 'GoogleSignIn'
+  
+  pod 'Alamofire'
 
 end

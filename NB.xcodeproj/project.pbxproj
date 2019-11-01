@@ -16,7 +16,7 @@
 		218C154C232827CE00DA4F0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C154B232827CE00DA4F0D /* HomeViewController.swift */; };
 		219139FA21F0BFDA003ABEE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219139F921F0BFDA003ABEE9 /* ViewController.swift */; };
 		21EDA3A32299B9850067A91C /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */; };
-		21EDA3A52299B9890067A91C /* DownloadTableViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */; };
+		21EDA3A52299B9890067A91C /* DownloadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */; };
 		21EDA3AA22A01D5A0067A91C /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A922A01D5A0067A91C /* SubjectTableViewCell.swift */; };
 		21F536A82354C74400516B10 /* PopUpMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F536A72354C74400516B10 /* PopUpMenu.swift */; };
 		21F536AA2354CD2200516B10 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F536A92354CD2200516B10 /* Notes.swift */; };
@@ -38,7 +38,7 @@
 		218C154B232827CE00DA4F0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		219139F921F0BFDA003ABEE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
-		21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadTableViewController copy.swift"; sourceTree = "<group>"; };
+		21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewController.swift; sourceTree = "<group>"; };
 		21EDA3A922A01D5A0067A91C /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
 		21F536A72354C74400516B10 /* PopUpMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpMenu.swift; sourceTree = "<group>"; };
 		21F536A92354CD2200516B10 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
@@ -84,11 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				213BF5FD21DFCE420089BB9A /* AppDelegate.swift */,
+				21EDA3AB22A042D30067A91C /* customCell */,
+				21B2434C236C238F00220B01 /* DataModel */,
+				21F98B8F23209177005CC86D /* subjects.json */,
 				213BF60F21E0AF290089BB9A /* viewcontrollers */,
 				213BF60121DFCE420089BB9A /* Main.storyboard */,
 				213BF60621DFCE440089BB9A /* LaunchScreen.storyboard */,
 				213BF60421DFCE440089BB9A /* Assets.xcassets */,
-				21EDA3AB22A042D30067A91C /* customCell */,
 				213BF60921DFCE440089BB9A /* Info.plist */,
 				212F597A234F4A41000D118F /* credentials.plist */,
 			);
@@ -99,16 +101,22 @@
 			isa = PBXGroup;
 			children = (
 				219139F921F0BFDA003ABEE9 /* ViewController.swift */,
-				21EDA3A42299B9890067A91C /* DownloadTableViewController copy.swift */,
-				21F98B8F23209177005CC86D /* subjects.json */,
+				21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */,
 				21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */,
 				218C154B232827CE00DA4F0D /* HomeViewController.swift */,
 				213A5C8322D572D50013A178 /* NotesTableViewController.swift */,
 				21F98B9123218B7B005CC86D /* PopUpOptionViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		21B2434C236C238F00220B01 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
 				21F536A72354C74400516B10 /* PopUpMenu.swift */,
 				21F536A92354CD2200516B10 /* Notes.swift */,
 			);
-			path = viewcontrollers;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		21EDA3AB22A042D30067A91C /* customCell */ = {
@@ -253,15 +261,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NB/Pods-NB-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,7 +287,7 @@
 				21F98B9223218B7B005CC86D /* PopUpOptionViewController.swift in Sources */,
 				21F536A82354C74400516B10 /* PopUpMenu.swift in Sources */,
 				218C154C232827CE00DA4F0D /* HomeViewController.swift in Sources */,
-				21EDA3A52299B9890067A91C /* DownloadTableViewController copy.swift in Sources */,
+				21EDA3A52299B9890067A91C /* DownloadTableViewController.swift in Sources */,
 				213A5C8422D572D50013A178 /* NotesTableViewController.swift in Sources */,
 				21F98B9623255295005CC86D /* NotesTableViewCell.swift in Sources */,
 			);
