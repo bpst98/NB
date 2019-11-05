@@ -15,6 +15,8 @@
 		213BF60821DFCE440089BB9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213BF60621DFCE440089BB9A /* LaunchScreen.storyboard */; };
 		218C154C232827CE00DA4F0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C154B232827CE00DA4F0D /* HomeViewController.swift */; };
 		219139FA21F0BFDA003ABEE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219139F921F0BFDA003ABEE9 /* ViewController.swift */; };
+		21B2434E2370076300220B01 /* SavedNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B2434D2370076300220B01 /* SavedNotes.swift */; };
+		21B243502370439200220B01 /* FileDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B2434F2370439200220B01 /* FileDirectory.swift */; };
 		21EDA3A32299B9850067A91C /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */; };
 		21EDA3A52299B9890067A91C /* DownloadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */; };
 		21EDA3AA22A01D5A0067A91C /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EDA3A922A01D5A0067A91C /* SubjectTableViewCell.swift */; };
@@ -37,6 +39,8 @@
 		213BF60921DFCE440089BB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		218C154B232827CE00DA4F0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		219139F921F0BFDA003ABEE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21B2434D2370076300220B01 /* SavedNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNotes.swift; sourceTree = "<group>"; };
+		21B2434F2370439200220B01 /* FileDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDirectory.swift; sourceTree = "<group>"; };
 		21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
 		21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewController.swift; sourceTree = "<group>"; };
 		21EDA3A922A01D5A0067A91C /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,11 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				219139F921F0BFDA003ABEE9 /* ViewController.swift */,
-				21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */,
-				21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */,
-				218C154B232827CE00DA4F0D /* HomeViewController.swift */,
-				213A5C8322D572D50013A178 /* NotesTableViewController.swift */,
 				21F98B9123218B7B005CC86D /* PopUpOptionViewController.swift */,
+				218C154B232827CE00DA4F0D /* HomeViewController.swift */,
+				21EDA3A22299B9850067A91C /* SubjectTableViewController.swift */,
+				21EDA3A42299B9890067A91C /* DownloadTableViewController.swift */,
+				213A5C8322D572D50013A178 /* NotesTableViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -115,6 +119,8 @@
 			children = (
 				21F536A72354C74400516B10 /* PopUpMenu.swift */,
 				21F536A92354CD2200516B10 /* Notes.swift */,
+				21B2434D2370076300220B01 /* SavedNotes.swift */,
+				21B2434F2370439200220B01 /* FileDirectory.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -284,12 +290,14 @@
 				21EDA3A32299B9850067A91C /* SubjectTableViewController.swift in Sources */,
 				213BF5FE21DFCE420089BB9A /* AppDelegate.swift in Sources */,
 				21F536AA2354CD2200516B10 /* Notes.swift in Sources */,
+				21B243502370439200220B01 /* FileDirectory.swift in Sources */,
 				21F98B9223218B7B005CC86D /* PopUpOptionViewController.swift in Sources */,
 				21F536A82354C74400516B10 /* PopUpMenu.swift in Sources */,
 				218C154C232827CE00DA4F0D /* HomeViewController.swift in Sources */,
 				21EDA3A52299B9890067A91C /* DownloadTableViewController.swift in Sources */,
 				213A5C8422D572D50013A178 /* NotesTableViewController.swift in Sources */,
 				21F98B9623255295005CC86D /* NotesTableViewCell.swift in Sources */,
+				21B2434E2370076300220B01 /* SavedNotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

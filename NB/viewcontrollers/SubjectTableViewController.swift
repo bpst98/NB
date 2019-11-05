@@ -9,13 +9,15 @@ class SubjectTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = false
         parse()
         // self.clearsSelectionOnViewWillAppear = false
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+    }
     
-    //Parse function
+    //MARK:-Parse function
     func parse(){
         let url = Bundle.main.url(forResource: "subjects", withExtension: "json")
         if let url = url{

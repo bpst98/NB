@@ -41,17 +41,15 @@ class PopUpOptionViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
 
     }
-    
+    //MARK:- Back Button
     @IBAction func BackButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        
     }
+    //MARK:- Go to NotesTableViewController
     @IBAction func notesClicked(_ sender: Any) {
         delegate?.didTapNotes(title: PopUpItem.title)
-
         print("Clicked notesCLicked")
         goToNotesTableViewController()
-
     }
     @IBAction func QandAPapersClicked(_ sender: Any) {
         delegate?.didQandAPapers(title: PopUpItem.title)

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var savedNotes = [SavedNotes]()
+
 class DownloadTableViewController: UITableViewController {
 
     override func viewDidLoad() {

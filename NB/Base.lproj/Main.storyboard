@@ -96,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-Yz-ZFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461" y="2662"/>
+            <point key="canvasLocation" x="1401" y="2660"/>
         </scene>
         <!--Pop Up Option View Controller-->
         <scene sceneID="bWX-Ly-NSh">
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmx-UT-0NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="1880"/>
+            <point key="canvasLocation" x="2920.8000000000002" y="1879.610194902549"/>
         </scene>
         <!--Notes Table View Controller-->
         <scene sceneID="w7N-5v-ezM">
@@ -375,13 +375,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjT-h5-CJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="2662"/>
+            <point key="canvasLocation" x="574" y="2660"/>
         </scene>
         <!--Download Table View Controller-->
         <scene sceneID="LEo-rJ-FDo">
             <objects>
                 <tableViewController id="WHK-Il-dGg" customClass="DownloadTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8EY-A9-7eF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8EY-A9-7eF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.68415542845380295" green="1" blue="0.61413327215195135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -401,11 +401,11 @@
                             <outlet property="delegate" destination="WHK-Il-dGg" id="lz4-lO-FJW"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="n4u-ly-ql1"/>
+                    <navigationItem key="navigationItem" id="MIc-Bs-oQg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmJ-WH-9f3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295.19999999999999" y="1879.610194902549"/>
+            <point key="canvasLocation" x="-295" y="2660"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="b5R-sg-J8w">
@@ -461,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7j-uA-M3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.2" y="2661.3193403298351"/>
+            <point key="canvasLocation" x="2146" y="2661"/>
         </scene>
         <!--Subjects-->
         <scene sceneID="NPT-C4-0dt">
@@ -482,7 +482,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Eg-n1-GhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463.125" y="1880.2816901408451"/>
+            <point key="canvasLocation" x="1400.8" y="1879.610194902549"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JrL-j5-Bey">
@@ -495,7 +495,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WHK-Il-dGg" kind="relationship" relationship="viewControllers" id="aEh-6x-Ez6"/>
+                        <segue destination="YH7-Wp-6dP" kind="relationship" relationship="viewControllers" id="aEh-6x-Ez6"/>
                         <segue destination="2mJ-xQ-B7C" kind="relationship" relationship="viewControllers" id="zmt-6Z-heK"/>
                         <segue destination="M7e-mB-CpG" kind="relationship" relationship="viewControllers" id="Yj1-aj-tIE"/>
                     </connections>
@@ -521,7 +521,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmo-U5-GyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.5" y="1879.2253521126761"/>
+            <point key="canvasLocation" x="2146.4000000000001" y="1878.7106446776613"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TYK-ng-o3J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YH7-Wp-6dP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="n4u-ly-ql1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6jF-tf-TIY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WHK-Il-dGg" kind="relationship" relationship="rootViewController" id="T1x-mk-nT3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnQ-bv-lsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.19999999999999" y="1879.610194902549"/>
         </scene>
     </scenes>
     <resources>
