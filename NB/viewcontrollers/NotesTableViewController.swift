@@ -94,7 +94,7 @@ extension NotesTableViewController : selectedButtonDelegate{
         
     //    let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
         let destination : DownloadRequest.DownloadFileDestination = {temporaryfileURL,HTTPresponse in  FileDirectory.documentsURL
-            let fileurl = FileDirectory.documentsURL.appendingPathComponent((filename)+".pdf")
+            let fileurl = URL(fileURLWithPath: FileDirectory.documentsURL[0]).appendingPathComponent((filename)+".pdf")
             print("FILEURL :" ,fileurl,"\nTITLE: ",filename)
             self.savedNotes.append(SavedNotes(Title: filename, URLofFile: fileurl))
             

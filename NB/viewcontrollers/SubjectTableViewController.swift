@@ -9,12 +9,13 @@ class SubjectTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.topItem?.title = "SUBJECTS"
         parse()
         // self.clearsSelectionOnViewWillAppear = false
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     override func viewDidAppear(_ animated: Bool) {
-        print("viewDidAppear")
+        print(" SubjectTableViewController :viewDidAppear")
     }
     
     //MARK:-Parse function

@@ -377,7 +377,7 @@
             </objects>
             <point key="canvasLocation" x="574" y="2660"/>
         </scene>
-        <!--Download Table View Controller-->
+        <!--DOWNLOADS-->
         <scene sceneID="LEo-rJ-FDo">
             <objects>
                 <tableViewController id="WHK-Il-dGg" customClass="DownloadTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
@@ -401,7 +401,7 @@
                             <outlet property="delegate" destination="WHK-Il-dGg" id="lz4-lO-FJW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="MIc-Bs-oQg"/>
+                    <navigationItem key="navigationItem" title="DOWNLOADS" id="MIc-Bs-oQg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmJ-WH-9f3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

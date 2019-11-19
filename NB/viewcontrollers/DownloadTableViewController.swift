@@ -10,10 +10,18 @@ import UIKit
 
 var savedNotes = [SavedNotes]()
 
+let newpath = FileDirectory.documentsURL
+let FileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
+let count = FileContent?.count
+
 class DownloadTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(newpath)
+        
+        print("Number of files in storage : ",count! )
+
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,7 +31,7 @@ class DownloadTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return savedNotes.count
     }
 
 
@@ -36,4 +44,13 @@ class DownloadTableViewController: UITableViewController {
     }
 
 
+}
+
+//MARK:- Loading PDF file from directory
+
+extension DownloadTableViewController{
+
+
+    
+    
 }

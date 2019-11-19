@@ -17,4 +17,3 @@ class SavedNotes{
         self.URLofFile = URLofFile
     }
 }
-
