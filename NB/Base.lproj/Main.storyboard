@@ -93,153 +93,90 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SUBJECTS" id="avl-Mv-dD4"/>
+                    <connections>
+                        <outlet property="EBooksButton" destination="daU-Wb-8oj" id="nsR-w8-opk"/>
+                        <outlet property="NotesButton" destination="Z5z-o9-vyO" id="471-DG-hno"/>
+                        <outlet property="PopupView" destination="C0R-1i-u8g" id="peB-DR-Fbo"/>
+                        <outlet property="PracticalFilesButton" destination="yFM-LG-fP6" id="r6T-eh-e23"/>
+                        <outlet property="QandAPapersButton" destination="B8C-K5-U0h" id="fXw-vO-b9G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-Yz-ZFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="C0R-1i-u8g">
+                    <rect key="frame" x="0.0" y="0.0" width="421" height="741"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkL-GD-tbn" userLabel="BackButton">
+                            <rect key="frame" x="0.0" y="0.0" width="421" height="741"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" red="0.5816816092" green="0.68134021759999996" blue="0.89441555740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="BackButtonAction:" destination="Ket-fH-cfp" eventType="touchUpInside" id="Jfd-dC-cZr"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="H2f-DV-AHu">
+                            <rect key="frame" x="0.0" y="150" width="421" height="326"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5z-o9-vyO">
+                                    <rect key="frame" x="50.5" y="0.0" width="320" height="80"/>
+                                    <color key="backgroundColor" red="0.30322372913360596" green="0.5087047815322876" blue="0.87772673368453979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.40711450249999998" green="0.56381489510000005" blue="0.87447426839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Notes" backgroundImage="notespopvcimage">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="notesClicked:" destination="Ket-fH-cfp" eventType="touchUpInside" id="iM7-Mj-LHd"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-K5-U0h">
+                                    <rect key="frame" x="50.5" y="82" width="320" height="80"/>
+                                    <color key="backgroundColor" red="0.40711450249711983" green="0.5638148951373656" blue="0.87447426837698528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Question Papers" backgroundImage="Quespaperpopvcimage">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="QandAPapersClicked:" destination="Ket-fH-cfp" eventType="touchUpInside" id="qwJ-P7-E7b"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFM-LG-fP6">
+                                    <rect key="frame" x="50.5" y="164" width="320" height="80"/>
+                                    <color key="backgroundColor" red="0.508411705493927" green="0.62596726417541504" blue="0.87267690896987915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Practical Files" backgroundImage="Practicalfilepopvcimage">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="PracticalFilesClicked:" destination="Ket-fH-cfp" eventType="touchUpInside" id="GVj-D8-Lps"/>
+                                    </connections>
+                                </button>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Wb-8oj">
+                                    <rect key="frame" x="50.5" y="246" width="320" height="80"/>
+                                    <color key="backgroundColor" red="0.58168160915374756" green="0.68134021759033203" blue="0.89441555738449097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="E-books" backgroundImage="ebookspopvcimage">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="EBooksClicked:" destination="Ket-fH-cfp" eventType="touchUpInside" id="U3N-RV-Inr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ZkL-GD-tbn" firstAttribute="bottom" secondItem="weL-DJ-A5O" secondAttribute="bottom" id="57A-Ya-OaL"/>
+                        <constraint firstItem="ZkL-GD-tbn" firstAttribute="top" secondItem="weL-DJ-A5O" secondAttribute="top" id="6GC-7P-2hA"/>
+                        <constraint firstItem="ZkL-GD-tbn" firstAttribute="trailing" secondItem="weL-DJ-A5O" secondAttribute="trailing" id="X0l-GU-XTS"/>
+                        <constraint firstItem="H2f-DV-AHu" firstAttribute="top" secondItem="weL-DJ-A5O" secondAttribute="top" constant="150" id="X1p-9u-C1e"/>
+                        <constraint firstItem="weL-DJ-A5O" firstAttribute="trailing" secondItem="H2f-DV-AHu" secondAttribute="trailing" id="n9C-c3-1DY"/>
+                        <constraint firstItem="H2f-DV-AHu" firstAttribute="leading" secondItem="weL-DJ-A5O" secondAttribute="leading" id="rCX-gl-uaB"/>
+                        <constraint firstItem="ZkL-GD-tbn" firstAttribute="leading" secondItem="weL-DJ-A5O" secondAttribute="leading" id="sZ9-G9-Bet"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="weL-DJ-A5O"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="1401" y="2660"/>
-        </scene>
-        <!--Pop Up Option View Controller-->
-        <scene sceneID="bWX-Ly-NSh">
-            <objects>
-                <viewController storyboardIdentifier="PopUpOptionViewController" modalTransitionStyle="partialCurl" id="fLP-8q-I5n" customClass="PopUpOptionViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RcH-iL-NpO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGD-h5-PUT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="0.05931269171779141" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="BackButtonAction:" destination="fLP-8q-I5n" eventType="touchUpInside" id="yEx-kE-RPy"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QT-ZI-LLn">
-                                <rect key="frame" x="43.5" y="177.5" width="288" height="312"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quespaperpopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="ry1-7x-rch">
-                                        <rect key="frame" x="0.0" y="80" width="288" height="72"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="huE-3t-cNe"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Practicalfilepopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-B0-4LC">
-                                        <rect key="frame" x="0.0" y="160" width="288" height="72"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="snz-jY-4IO"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ebookspopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-4k-bdS">
-                                        <rect key="frame" x="0.0" y="240" width="288" height="72"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notespopvcimage" translatesAutoresizingMaskIntoConstraints="NO" id="7RQ-x9-fXD">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="72"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="UKq-HW-tUQ"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-o9-3yP">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="72"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="tsc-b1-mQp"/>
-                                        </constraints>
-                                        <state key="normal" title="Notes">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="notesClicked:" destination="fLP-8q-I5n" eventType="touchUpInside" id="IY9-YN-2Sj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyq-GR-cLO">
-                                        <rect key="frame" x="0.0" y="80" width="288" height="72"/>
-                                        <state key="normal" title="Question Papers">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="QandAPapersClicked:" destination="fLP-8q-I5n" eventType="touchUpInside" id="ysT-vq-wtw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eby-d2-hgE">
-                                        <rect key="frame" x="0.0" y="160" width="288" height="72"/>
-                                        <state key="normal" title="Practical Files">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="PracticalFilesClicked:" destination="fLP-8q-I5n" eventType="touchUpInside" id="CfN-z1-zRd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-2m-3xy">
-                                        <rect key="frame" x="0.0" y="240" width="288" height="72"/>
-                                        <state key="normal" title="E-books">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="EBooksClicked:" destination="fLP-8q-I5n" eventType="touchUpInside" id="wD7-Ks-plU"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="trailing" secondItem="ry1-7x-rch" secondAttribute="trailing" id="0Sv-xc-3pS"/>
-                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="top" secondItem="0QT-ZI-LLn" secondAttribute="top" id="29k-o4-Zzi"/>
-                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="leading" secondItem="kbA-4k-bdS" secondAttribute="leading" id="2Y9-IC-hKE"/>
-                                    <constraint firstAttribute="bottom" secondItem="UNp-2m-3xy" secondAttribute="bottom" id="6n2-c3-m19"/>
-                                    <constraint firstItem="eby-d2-hgE" firstAttribute="top" secondItem="ry1-7x-rch" secondAttribute="bottom" constant="8" id="A9E-tM-WO9"/>
-                                    <constraint firstItem="ry1-7x-rch" firstAttribute="top" secondItem="7RQ-x9-fXD" secondAttribute="bottom" constant="8" symbolic="YES" id="Blu-hs-Hxm"/>
-                                    <constraint firstItem="dfZ-o9-3yP" firstAttribute="top" secondItem="0QT-ZI-LLn" secondAttribute="top" id="EQp-C8-ZC0"/>
-                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="leading" secondItem="ry1-7x-rch" secondAttribute="leading" id="EwZ-JG-W70"/>
-                                    <constraint firstAttribute="trailing" secondItem="UNp-2m-3xy" secondAttribute="trailing" id="FpR-hf-sGb"/>
-                                    <constraint firstItem="pyq-GR-cLO" firstAttribute="top" secondItem="7RQ-x9-fXD" secondAttribute="bottom" constant="8" id="HVF-mf-1Ls"/>
-                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="top" secondItem="ry1-7x-rch" secondAttribute="bottom" constant="8" symbolic="YES" id="Hqc-P0-Hne"/>
-                                    <constraint firstItem="7RQ-x9-fXD" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="JfF-o1-evK"/>
-                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="top" secondItem="pyq-GR-cLO" secondAttribute="bottom" constant="8" id="Jne-ax-5k6"/>
-                                    <constraint firstItem="kbA-4k-bdS" firstAttribute="top" secondItem="eby-d2-hgE" secondAttribute="bottom" constant="8" id="Juz-s3-bqD"/>
-                                    <constraint firstAttribute="trailing" secondItem="dfZ-o9-3yP" secondAttribute="trailing" id="PrD-Jw-Puc"/>
-                                    <constraint firstItem="dfZ-o9-3yP" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="TiA-Qe-5tJ"/>
-                                    <constraint firstItem="UNp-2m-3xy" firstAttribute="top" secondItem="zqT-B0-4LC" secondAttribute="bottom" constant="8" id="WF1-Pt-uol"/>
-                                    <constraint firstItem="kbA-4k-bdS" firstAttribute="top" secondItem="zqT-B0-4LC" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFa-dw-xZv"/>
-                                    <constraint firstItem="zqT-B0-4LC" firstAttribute="trailing" secondItem="kbA-4k-bdS" secondAttribute="trailing" id="biF-sz-uzt"/>
-                                    <constraint firstAttribute="width" constant="288" id="dfw-zE-Umy"/>
-                                    <constraint firstItem="ry1-7x-rch" firstAttribute="trailing" secondItem="zqT-B0-4LC" secondAttribute="trailing" id="fPK-vb-pDJ"/>
-                                    <constraint firstAttribute="height" constant="312" id="fVq-q8-y16"/>
-                                    <constraint firstAttribute="trailing" secondItem="7RQ-x9-fXD" secondAttribute="trailing" id="gDt-uN-Tsv"/>
-                                    <constraint firstItem="eby-d2-hgE" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="ibb-E3-Jl9"/>
-                                    <constraint firstAttribute="bottom" secondItem="kbA-4k-bdS" secondAttribute="bottom" id="mGW-Dj-7s8"/>
-                                    <constraint firstItem="ry1-7x-rch" firstAttribute="leading" secondItem="zqT-B0-4LC" secondAttribute="leading" id="ov7-DK-dvo"/>
-                                    <constraint firstAttribute="trailing" secondItem="eby-d2-hgE" secondAttribute="trailing" id="tjh-bm-EMG"/>
-                                    <constraint firstAttribute="trailing" secondItem="pyq-GR-cLO" secondAttribute="trailing" id="tkm-wU-9n1"/>
-                                    <constraint firstAttribute="bottom" secondItem="kbA-4k-bdS" secondAttribute="bottom" id="yOS-Kd-lQl"/>
-                                    <constraint firstItem="UNp-2m-3xy" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="zB5-sd-Sjw"/>
-                                    <constraint firstItem="pyq-GR-cLO" firstAttribute="leading" secondItem="0QT-ZI-LLn" secondAttribute="leading" id="zhG-BM-vRw"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.75117834719999999" green="1" blue="0.9807201525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerY" secondItem="sGD-h5-PUT" secondAttribute="centerY" id="42C-Xx-bCI"/>
-                            <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerX" secondItem="sGD-h5-PUT" secondAttribute="centerX" id="GGr-ze-DNq"/>
-                            <constraint firstAttribute="trailing" secondItem="sGD-h5-PUT" secondAttribute="trailing" id="IGU-zw-bX3"/>
-                            <constraint firstItem="sGD-h5-PUT" firstAttribute="bottom" secondItem="Vbf-YN-9VX" secondAttribute="bottom" id="QOS-cY-Qud"/>
-                            <constraint firstItem="sGD-h5-PUT" firstAttribute="leading" secondItem="Vbf-YN-9VX" secondAttribute="leading" id="RNf-iu-LMN"/>
-                            <constraint firstItem="0QT-ZI-LLn" firstAttribute="centerX" secondItem="sGD-h5-PUT" secondAttribute="centerX" id="cVz-PQ-G3n"/>
-                            <constraint firstItem="sGD-h5-PUT" firstAttribute="top" secondItem="RcH-iL-NpO" secondAttribute="top" id="tTx-QI-LtB"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vbf-YN-9VX"/>
-                    </view>
-                    <connections>
-                        <outlet property="BackButton" destination="sGD-h5-PUT" id="hg3-jP-LLp"/>
-                        <outlet property="EBooksButton" destination="UNp-2m-3xy" id="Efv-XN-VMT"/>
-                        <outlet property="NotesButton" destination="dfZ-o9-3yP" id="0n4-6g-Hfg"/>
-                        <outlet property="PracticalFilesButton" destination="eby-d2-hgE" id="bL8-v6-4N0"/>
-                        <outlet property="QandAPapersButton" destination="pyq-GR-cLO" id="XIo-HK-Y4E"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bmx-UT-0NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2920.8000000000002" y="1879.610194902549"/>
+            <point key="canvasLocation" x="1401" y="3349"/>
         </scene>
         <!--Notes Table View Controller-->
         <scene sceneID="w7N-5v-ezM">
