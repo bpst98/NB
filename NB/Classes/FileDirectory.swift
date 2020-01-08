@@ -19,6 +19,8 @@ class FileDirectory{
     
     
     static let docURL  = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    
+    
 //    static let documentsURL = docURL.appendingPathComponent("NB")
 //    static let URLPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     

@@ -105,7 +105,7 @@ extension NotesTableViewController : selectedButtonDelegate{
             return(fileurl,[.removePreviousFile,.createIntermediateDirectories])
         }
         Alamofire.download(url,to: destination).responseData{(response) in
-            print(response.error)
+//            print(response.error)
         }
         
     }

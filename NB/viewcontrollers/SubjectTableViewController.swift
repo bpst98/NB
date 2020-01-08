@@ -44,7 +44,7 @@ class SubjectTableViewController: UITableViewController {
 //    }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(" SubjectTableViewController :viewDidAppear")
+        
     }
     
     //MARK:-Parse function
