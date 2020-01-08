@@ -25,7 +25,7 @@ class DownloadTableViewController: UITableViewController {
         super.viewDidLoad()
         updateTableData()
         self.tableView.reloadData()
-        print("Number of files in storage now : ",FileContent!.count )
+        print("Number of files in storage now : ",FileContent?.count )
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,29 +52,33 @@ class DownloadTableViewController: UITableViewController {
         return 80
     }
     
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
-    }
-    
-
 }
 
 extension DownloadTableViewController{
     
+    //MARK:- Loading PDF file from directory
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let VC = self.storyboard?.instantiateViewController(withIdentifier: "PDFViewController") as! PDFViewController
+        VC.filePath = SingleUrl + "/" + FileContent![indexPath.row]
+        self.navigationController?.pushViewController(VC, animated: true)
+        
+    }
     //MARK:- Updating Table data
     func updateTableData(){
-         newpath = FileDirectory.documentsURL
-         FileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
+        newpath = FileDirectory.documentsURL
+        FileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
+        self.tableView.reloadData()
     }
     
     //MARK:- Deleting file from directory
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         print(SingleUrl)
         try! FileManager.default.removeItem(atPath: SingleUrl + "/" + FileContent![indexPath.row])
-        tableView.deleteRows(at: [indexPath], with: .fade)
+        self.tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
     
-    //MARK:- Loading PDF file from directory
+
+    
 }

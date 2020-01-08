@@ -317,8 +317,8 @@
         <!--DOWNLOADS-->
         <scene sceneID="LEo-rJ-FDo">
             <objects>
-                <tableViewController id="WHK-Il-dGg" customClass="DownloadTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8EY-A9-7eF">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="WHK-Il-dGg" customClass="DownloadTableViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8EY-A9-7eF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.68415542845380295" green="1" blue="0.61413327215195135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -415,6 +415,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7j-uA-M3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2146" y="2661"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IGl-W5-pQz">
+            <objects>
+                <viewController storyboardIdentifier="PDFViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uBS-fg-1ni" customClass="PDFViewController" customModule="NB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIx-kA-4fi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Zcn-Al-Dhf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3N-6d-rXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3087" y="2660"/>
         </scene>
         <!--Subjects-->
         <scene sceneID="NPT-C4-0dt">
