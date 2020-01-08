@@ -22,8 +22,7 @@ class PDFViewController: UIViewController {
         // Fit content in PDFView.
         pdfView.autoScales = true
         
-        // Load Sample.pdf file from app bundle.
-        let bundleURL = Bundle.main.url(forResource: "Sample", withExtension: "pdf")
+        // Load pdf file from filepath
         let fileURL = URL.init(fileURLWithPath: filePath)
         pdfView.document = PDFDocument(url: fileURL)
      

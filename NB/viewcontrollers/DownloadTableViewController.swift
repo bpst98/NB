@@ -8,8 +8,8 @@ import UIKit
 var savedNotes = [SavedNotes]()
 
 var newpath = FileDirectory.documentsURL
-var FileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
-var SingleUrl = newpath.first!
+var fileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
+var singleUrl = newpath.first!
 
 class DownloadTableViewController: UITableViewController {
 
@@ -18,14 +18,13 @@ class DownloadTableViewController: UITableViewController {
         
         print("newpath : ",newpath)
         print("newpath.first! : ",newpath.first!)
-        print("FileContent : ",FileContent)
+        print("FileContent : ",fileContent as Any)
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
+        super.viewDidAppear(animated)
         updateTableData()
-        self.tableView.reloadData()
-        print("Number of files in storage now : ",FileContent?.count )
+        print("Number of files in storage now : ",fileContent?.count as Any )
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,13 +34,13 @@ class DownloadTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return FileContent?.count ?? 0
+        return fileContent?.count ?? 0
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = FileContent![indexPath.row]
+        cell.textLabel?.text = fileContent![indexPath.row]
         cell.detailTextLabel?.text = " : Notes"
         
         return cell
@@ -60,24 +59,31 @@ extension DownloadTableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let VC = self.storyboard?.instantiateViewController(withIdentifier: "PDFViewController") as! PDFViewController
-        VC.filePath = SingleUrl + "/" + FileContent![indexPath.row]
+        VC.filePath = singleUrl + "/" + fileContent![indexPath.row]
         self.navigationController?.pushViewController(VC, animated: true)
         
     }
     //MARK:- Updating Table data
     func updateTableData(){
         newpath = FileDirectory.documentsURL
-        FileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
+        fileContent = (try? FileManager.default.contentsOfDirectory(atPath : newpath.first!))
         self.tableView.reloadData()
     }
     
     //MARK:- Deleting file from directory
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        print(SingleUrl)
-        try! FileManager.default.removeItem(atPath: SingleUrl + "/" + FileContent![indexPath.row])
-        self.tableView.deleteRows(at: [indexPath], with: .fade)
+        if editingStyle == .delete {
+//            print(singleUrl + "/" + fileContent![indexPath.row] + " : to be deleted ")
+//            fileContent?.remove(at: indexPath.row)
+//            try! FileManager.default.removeItem(atPath: singleUrl + "/" + fileContent![indexPath.row])
+//            tableView.beginUpdates()
+//            self.tableView.deleteRows(at: [indexPath], with: .fade)
+//            tableView.endUpdates()
+            try! FileManager.default.removeItem(atPath: singleUrl + "/" + fileContent![indexPath.row])
+            fileContent!.remove(at:indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
-
     
 
     
